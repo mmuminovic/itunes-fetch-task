@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useMutation } from 'react-query';
-import './App.css';
 import { searchMusic } from './utils/itunesApi';
+import './App.css';
 
 const initialList = ['A', 'B', 'C', 'D', 'E'];
 
@@ -61,8 +61,8 @@ function App() {
                     }}
                 />
                 <div className="list-wrapper">
-                    {list.map((item) => (
-                        <div key={item} className="list-item">
+                    {list.map((item, i) => (
+                        <div key={item + i} className="list-item">
                             {item}
                         </div>
                     ))}
